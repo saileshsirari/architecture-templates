@@ -23,13 +23,13 @@ plugins {
 }
 
 android {
-    namespace = "android.template.core.database"
+    namespace = "com.sai.users.app.core.database"
     compileSdk = 35
 
     defaultConfig {
         minSdk = 21
 
-        testInstrumentationRunner = "android.template.core.testing.HiltTestRunner"
+        testInstrumentationRunner = "com.sai.users.app.core.testing.HiltTestRunner"
         consumerProguardFiles("consumer-rules.pro")
 
         // The schemas directory contains a schema file for each version of the Room database.

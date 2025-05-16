@@ -23,13 +23,13 @@ plugins {
 }
 
 android {
-    namespace = "android.template.feature.mymodel"
+    namespace = "com.sai.users.app.feature.mymodel"
     compileSdk = 35
 
     defaultConfig {
         minSdk = 21
 
-        testInstrumentationRunner = "android.template.core.testing.HiltTestRunner"
+        testInstrumentationRunner = "com.sai.users.app.core.testing.HiltTestRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 

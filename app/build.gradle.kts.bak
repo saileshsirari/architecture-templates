@@ -25,11 +25,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sai.users.app"
+    namespace = "android.template"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.sai.users.app"
+        applicationId = "android.template"
         minSdk = 21
         targetSdk = 35
         versionCode = 1

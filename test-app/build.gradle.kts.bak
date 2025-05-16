@@ -16,20 +16,21 @@
 
 @Suppress("DSL_SCOPE_VIOLATION") // Remove when fixed https://youtrack.jetbrains.com/issue/KTIJ-19369
 plugins {
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.test)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-    namespace = "com.sai.users.app.core.data"
+    namespace = "android.template.test.navigation"
     compileSdk = 35
+    targetProjectPath = ":app"
 
     defaultConfig {
         minSdk = 21
+        targetSdk = 35
 
-        testInstrumentationRunner = "com.sai.users.app.core.testing.HiltTestRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        testInstrumentationRunner = "android.template.core.testing.HiltTestRunner"
     }
 
     buildFeatures {
@@ -50,15 +51,18 @@ android {
 }
 
 dependencies {
-    implementation(project(":core-database"))
+    implementation(project(":app"))
+    implementation(project(":core-data"))
+    implementation(project(":core-testing"))
+    implementation(project(":feature-mymodel"))
 
-    // Arch Components
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    // Testing
+    implementation(libs.androidx.test.core)
 
-    implementation(libs.kotlinx.coroutines.android)
+    // Hilt and instrumented tests.
+    implementation(libs.hilt.android.testing)
+    kapt(libs.hilt.android.compiler)
 
-    // Local tests: jUnit, coroutines, Android runner
-    testImplementation(libs.junit)
-    testImplementation(libs.kotlinx.coroutines.test)
+    // Compose
+    implementation(libs.androidx.compose.ui.test.junit4)
 }

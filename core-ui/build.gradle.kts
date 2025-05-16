@@ -22,7 +22,7 @@ plugins {
 }
 
 android {
-    namespace = "android.template.core.ui"
+    namespace = "com.sai.users.app.core.ui"
     compileSdk = 35
 
     defaultConfig {

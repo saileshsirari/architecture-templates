@@ -16,11 +16,7 @@
 #
 
 # Verify bash version. macOS comes with bash 3 preinstalled.
-if [[ ${BASH_VERSINFO[0]} -lt 4 ]]
-then
-  echo "You need at least bash 4 to run this script."
-  exit 1
-fi
+
 
 # exit when any command fails
 set -e

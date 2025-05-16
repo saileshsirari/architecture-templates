@@ -22,7 +22,7 @@ plugins {
 }
 
 android {
-    namespace = "android.template.core.testing"
+    namespace = "com.sai.users.app.core.testing"
     compileSdk = 35
 
     defaultConfig {

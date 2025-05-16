@@ -22,7 +22,7 @@ plugins {
 }
 
 android {
-    namespace = "android.template.test.navigation"
+    namespace = "com.sai.users.app.test.navigation"
     compileSdk = 35
     targetProjectPath = ":app"
 
@@ -30,7 +30,7 @@ android {
         minSdk = 21
         targetSdk = 35
 
-        testInstrumentationRunner = "android.template.core.testing.HiltTestRunner"
+        testInstrumentationRunner = "com.sai.users.app.core.testing.HiltTestRunner"
     }
 
     buildFeatures {
